@@ -17,5 +17,11 @@ Jobs = browser.find_elements_by_xpath("//*[contains(@class,'row result clickcard
 for items in Jobs:
     job = items.find_element_by_class_name('snip')
     description = job.text
-time.sleep(10)
+    if description.find("Easily apply") != -1:
+        job_title = items.find_element_by_tag_name("a").text
+        company = items.find_element_by_class_name("company").text
+        location = items.find_element_by_class_name("location").text
+        print(job_title + "\n" + company + "\n" + location)
+
+time.sleep(5)
 #browser.quit()
