@@ -15,7 +15,7 @@ browser.get(url)
 
 Jobs = browser.find_elements_by_xpath("//*[contains(@class,'row result clickcard')]")
 for items in Jobs:
-    job = items.find_element_by_xpath("//*[@class='snip']")
-    print(job.text)
+    job = items.find_element_by_class_name('snip')
+    description = job.text
 time.sleep(10)
 #browser.quit()
