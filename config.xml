@@ -1,0 +1,14 @@
+<root>
+	<rule ruleHost='baidu'>
+		<match front="&lt;html&gt;" behind="&lt;/html&gt;" haveChild="0" description="diyiceng" setUrl='1'>
+		</match>
+		<match front="&lt;html&gt;" behind="&lt;/html&gt;" haveChild="1" description="" setUrl=''>
+			<rule>
+				<match front="&lt;body&gt;" behind="&lt;/body&gt;" haveChild="0" description="dierceng">
+				</match>
+			</rule>
+		</match>
+		<match front="&lt;div&gt;" behind="&lt;/div&gt;" haveChild="0" description="222">
+		</match>
+	</rule>
+</root>

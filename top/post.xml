@@ -1,0 +1,38 @@
+<root>
+	<url url='http://localhost/post.php' method='post' database='MyTest' dataform='postData' postparam='postdata' ruleNum='3' maxDeep='1' code='utf-8'  Host='http://www.zhihu.com'/>
+	<rule ruleNum='2'>
+		<match front='avatar avatar-l" alt="' behind='"' haveChild='0' description='name'>
+		</match>
+		<match front='class="bio" title="' behind='"' haveChild='0' description='flag'>a
+		</match>
+		<match front='checked" class="' behind='"' haveChild='0' description='sex'>
+		</match>
+		<match front='employment item" title="' behind='"' haveChild='0' description='employment'>
+		</match>
+		<match front='education item" title="' behind='"' haveChild='0' description='education'>
+		</match>
+		<match front='location item" title="' behind='"' haveChild='0' description='location'>
+		</match>
+		<match front='business item" title="' behind='"' haveChild='0' description='business'>
+		</match>
+		<match front='format=html5;url=' behind='/answers' haveChild='0' description='userUrl'>
+		</match>
+		<match front='question_link"' behind='/h2' haveChild='1'>
+			<rule>
+				<match front='href="' behind='/answer' haveChild='0' description='answer_link' ruleNum='3'/>
+				<match front='&gt;' behind='&lt;' haveChild='0' description='answer_title'/>
+			</rule>
+		</match>
+	</rule>
+	<rule ruleNum='3'>
+		<match front='test' behind='/div' haveChild='1'>
+			<rule>
+				<match front='&gt;' behind='&lt;' haveChild='0' description='testPost'/>
+			</rule>
+		</match>
+	</rule>
+	<rule ruleNum='4'>
+		<match>
+		</match>
+	</rule>
+</root>
